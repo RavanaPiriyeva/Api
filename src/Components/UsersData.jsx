@@ -8,7 +8,7 @@ const UsersData = ({data}) => {
         {
        data && data.map(
                 ({id, name, email, company: { name: companyName } }, i) =>(
-                    <tr>
+                    <tr key={id}>
                     <th scope="row">{i}</th>
                     <td>{name}</td>
                     <td>{email}</td>

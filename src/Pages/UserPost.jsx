@@ -87,11 +87,11 @@ const UserPost = () => {
   };
   return (
     <Layout>
-      <div style={{ textAlign: 'end', padding: 20 }}> <Button color="success" onClick={() => add()} ><i class="fa-solid fa-plus"></i> Create</Button></div>
+      <div style={{ textAlign: 'end', padding: 20 }}> <Button color="success" onClick={() => add()} ><i className="fa-solid fa-plus"></i> Create</Button></div>
       <Row>
         {
           cause && cause.map((item) => {
-            return <Col xs={3} style={{ padding: 10, position: "relative" }}>
+            return <Col xs={3} style={{ padding: 10, position: "relative" }} key={item.id}>
               <Card body className="my-2" style={{ width: '18rem', height: '100%',paddingBottom:30 ,backgroundColor:'#00000012' }} >
                 <CardTitle tag="h5">
                   {item.title}
@@ -100,8 +100,8 @@ const UserPost = () => {
                   {item.body}
                 </CardText>
                 <div style={{ position: "absolute", bottom: 10, left: 10 }}>
-                  <Button color="secondary" style={{ margin: '0 10px 0 0' }} onClick={() => edit(item.id)} ><i class="fa-solid fa-pen-to-square"></i> Edit</Button>
-                  <Button color="danger" onClick={() => remove(item.id)} ><i class="fa-solid fa-trash"></i> Delete</Button>
+                  <Button color="secondary" style={{ margin: '0 10px 0 0' }} onClick={() => edit(item.id)} ><i className="fa-solid fa-pen-to-square"></i> Edit</Button>
+                  <Button color="danger" onClick={() => remove(item.id)} ><i className="fa-solid fa-trash"></i> Delete</Button>
                 </div>
               </Card>
 
