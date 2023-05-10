@@ -13,7 +13,7 @@ const UsersData = ({data}) => {
                     <td>{name}</td>
                     <td>{email}</td>
                     <td>{companyName}</td>
-                    <td><Link to={`/UsersPost/${id}`} className='btn btn-primary'>Get</Link></td>
+                    <td><Link to={`/UsersPost/${id}`} className='btn btn-primary'>See Post</Link></td>
                   </tr>
                 )
               )

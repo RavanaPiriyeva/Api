@@ -38,7 +38,7 @@ const User = () => {
       }, []);
   return (
     <Layout>
-      <Row>
+      <Row style={{padding:'20px 0'}}>
         <Col><div>
       {datas.error && <h5 color="red">Error occured ....</h5>}
       {datas.loading && <Spinner />}
@@ -50,6 +50,7 @@ const User = () => {
               <th>Name</th>
               <th>email</th>
               <th>companyName</th>
+              <th>See</th>
             </tr>
           </thead>
              <UsersData data={datas.data}></UsersData>
